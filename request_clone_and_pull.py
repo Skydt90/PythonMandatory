@@ -2,6 +2,7 @@ import json
 import requests
 import subprocess
 import os
+import sys
 
 base_path = "/Users/Christian/Desktop/Python Mandatory/Repositories/"
 API_URL = "https://api.github.com/orgs/python-elective-1-spring-2019/repos?per_page=100"
@@ -13,7 +14,8 @@ def getGithubCloneUrls():
     if response.status_code == 200:                                    # if success
         return extractJsonToDict(json.loads(response.content))         # execute remaining program 
     else:
-        return None
+        print("!!ERROR CONNECTING!!")
+        sys.exit()
 
 # return dict with name + clone url from json response
 def extractJsonToDict(content):

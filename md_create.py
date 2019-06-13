@@ -4,7 +4,7 @@ from traverse_readme import traverseReposAndGetRequiredReading
 import time
 
 path_folder = "/Users/Christian/Desktop/Python Mandatory/Reading Repo" 
-remote_repo_url = "https://github.com/Skydt90/Python-Required-Reading.git"
+remote_repo_url = "https://github.com/Skydt90/Python_required_reading.git"
 
 # creates a local md file, based on list returned by traverse_readme module
 def createMDFile(required_reading_list):
